@@ -1,0 +1,13 @@
+apiVersion: domain-manage.cmit.com/v1alpha1
+kind: DomainCancel
+metadata:
+  name: domaincancel-sample
+spec:
+  domains:
+    - option: del 
+      namespace: defaul
+      domain: book.test
+    - option: get 
+      namespace: default 
+      domain: book.com
+

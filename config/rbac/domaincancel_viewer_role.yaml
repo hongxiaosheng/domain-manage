@@ -1,0 +1,20 @@
+# permissions for end users to view domaincancels.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: domaincancel-viewer-role
+rules:
+- apiGroups:
+  - domain-manage.cmit.com
+  resources:
+  - domaincancels
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - domain-manage.cmit.com
+  resources:
+  - domaincancels/status
+  verbs:
+  - get

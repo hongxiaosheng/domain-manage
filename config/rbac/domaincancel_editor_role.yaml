@@ -1,0 +1,24 @@
+# permissions for end users to edit domaincancels.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: domaincancel-editor-role
+rules:
+- apiGroups:
+  - domain-manage.cmit.com
+  resources:
+  - domaincancels
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - domain-manage.cmit.com
+  resources:
+  - domaincancels/status
+  verbs:
+  - get

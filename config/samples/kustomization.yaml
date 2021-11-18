@@ -1,0 +1,4 @@
+## Append samples you want in your CSV to this file as resources ##
+resources:
+- domain-manage_v1alpha1_domaincancel.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples
